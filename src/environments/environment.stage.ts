@@ -2,7 +2,7 @@ import { version } from '../../package.json';
 
 export const environment = {
   production: false,
-  apiUrl: 'https://alkera-bingo-serve.herokuapp.com/',
-  osEndpoint: 'https://minio.alkera.com.tr/',
+  apiUrl: 'http://localhost:5000/',
+  osEndpoint: 'http://localhost:5000/',
   version,
 };

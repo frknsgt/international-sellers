@@ -2,7 +2,7 @@ import { version } from '../../package.json';
 
 export const environment = {
   production: true,
-  apiUrl: 'https://api.tombala.alkera.com.tr/',
+  apiUrl: 'http://localhost:5000/',
   version,
-  osEndpoint: 'https://minio.alkera.com.tr/',
+  osEndpoint: 'http://localhost:5000/',
 };
