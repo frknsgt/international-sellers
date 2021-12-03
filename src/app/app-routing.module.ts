@@ -9,6 +9,8 @@ import {
   HomepageComponent,
   DashboardComponent,
   LoginComponent,
+  AboutComponent,
+  ProductComponent
 } from './pages';
 
 
@@ -20,6 +22,14 @@ const routes: Routes = [
       {
         path: '',
         component: HomepageComponent,
+      },
+      {
+        path: 'product',
+        component: ProductComponent,
+      },
+      {
+        path: 'about',
+        component: AboutComponent
       },
     ],
   },
@@ -47,7 +57,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
 export const routingComponents = [
   ClientLayoutComponent,
   HomepageComponent,

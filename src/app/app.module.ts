@@ -22,6 +22,12 @@ import {
   PasswordControlWindowComponent,
 } from './components';
 import { HomepageComponent } from './pages';
+import { ClientHeaderComponent } from './components/layouts/client/client-header/client-header.component';
+import { ClientFooterComponent } from './components/layouts/client/client-footer/client-footer.component';
+import { OfferComponent } from './components/offer/offer.component';
+import { ProductCartComponent } from './components/product-cart/product-cart.component';
+import { AboutComponent } from './pages/client/about/about.component';
+import { ProductComponent } from './pages/client/product/product.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +36,12 @@ import { HomepageComponent } from './pages';
     PasswordChangeComponent,
     HomepageComponent,
     PasswordControlWindowComponent,
+    ClientHeaderComponent,
+    ClientFooterComponent,
+    OfferComponent,
+    ProductCartComponent,
+    AboutComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
