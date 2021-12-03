@@ -1,0 +1,32 @@
+<div class="homepage__all-screen py-5 px-3 px-sm-5">
+  <div class="fixed-top d-flex justify-content-end m-0">
+    <a (click)="setLang('tr')" class="homepage__lang__selection homepage__lang">
+      <i class="flag-icon flag-icon-tr rounded-circle"></i>
+    </a>
+    <a (click)="setLang('en')" class="homepage__lang__selection homepage__lang mx-3">
+      <i class="flag-icon flag-icon-us rounded-circle"></i>
+    </a>
+  </div>
+  <div class="row m-0 h-100 align-items-center">
+    <div class="homepage__box text-center">
+      <p class="homepage__title">{{ "WELCOME TO BINGO" | translate }}</p>
+      <button class="btn homepage__login-btn mt-5" [routerLink]="['/game-connection']">
+        {{ "JOIN THE BINGO" | translate }}
+      </button>
+
+      <div class="row m-0 justify-content-around mt-5" *ngIf="isLogin">
+        <a class="homepage__text" [routerLink]="['/admin']"><i class="fas fa-user-lock"></i> {{ "ADMIN PANEL" |
+          translate }}</a>
+        <a class="homepage__text" (click)="logout()"><i class="fas fa-sign-out-alt"></i> {{ "EXIT" |
+          translate }}</a>
+      </div>
+    </div>
+  </div>
+  <img src="../../../../assets/images/homepage-icons1.png" class="homepage__icon homepage__icon__one" />
+  <img src="../../../../assets/images/homepage-icons2.png" class="homepage__icon homepage__icon__two" />
+  <img src="../../../../assets/images/homepage-icons3.png" class="homepage__icon homepage__icon__three" />
+  <img src="../../../../assets/images/homepage-icons4.png" class="homepage__icon homepage__icon__four" />
+  <img src="../../../../assets/images/homepage-icons5.png" class="homepage__icon homepage__icon__five" />
+  <img src="../../../../assets/images/christmas-icon.png" class="homepage__icon homepage__icon__christmas" />
+  <img src="../../../../assets/images/cards.png" class="homepage__icon homepage__icon__cards" />
+</div>

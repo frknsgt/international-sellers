@@ -1,0 +1,48 @@
+$notificationTypes: (
+  danger: (
+    color: #721c24,
+    bgColor: #f8d7da
+  ),
+  success: (
+    color: #155724,
+    background-color: #d4edda
+  ),
+  warning: (
+    color: #856404,
+    background-color: #fff3cd
+  ),
+  info: (
+    color: #0c5460,
+    background-color: #d1ecf1
+  ),
+  primary: (
+    color: #004085,
+    background-color: #cce5ff
+  ),
+  secondary: (
+    color: #383d41,
+    background-color: #e2e3e5
+  )
+);
+
+@mixin setType($typeValues) {
+  @each $key, $value in $typeValues {
+    @if $key == 'color' {
+      color: $value;
+    } @else {
+      background-color: $value;
+    }
+  }
+}
+
+.notification {
+  @each $key, $values in $notificationTypes {
+    &__#{$key} {
+      @include setType($values);
+    }
+
+    &__#{$key} button {
+      @include setType($values);
+    }
+  }
+}
