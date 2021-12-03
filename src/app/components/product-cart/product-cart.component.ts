@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/models';
+import { ProductService } from 'src/app/utils/services/product/product.service';
 
 @Component({
   selector: 'app-product-cart',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductCartComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(
+    private _productService: ProductService
+  ) { }
+  product: Product = new Product;
+  async ngOnInit() {
+    this.product = <Product>await this._productService.listAsync()
   }
 
 }

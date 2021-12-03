@@ -12,6 +12,7 @@ import {
   AboutComponent,
   ProductComponent
 } from './pages';
+import { ShopComponent } from './pages/client/shop/shop.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
       {
         path: 'product',
         component: ProductComponent,
+      },
+      {
+        path: 'shop',
+        component: ShopComponent,
       },
       {
         path: 'about',

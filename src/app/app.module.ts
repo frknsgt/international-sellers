@@ -28,6 +28,7 @@ import { OfferComponent } from './components/offer/offer.component';
 import { ProductCartComponent } from './components/product-cart/product-cart.component';
 import { AboutComponent } from './pages/client/about/about.component';
 import { ProductComponent } from './pages/client/product/product.component';
+import { ShopComponent } from './pages/client/shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ProductComponent } from './pages/client/product/product.component';
     ProductCartComponent,
     AboutComponent,
     ProductComponent,
+    ShopComponent,
   ],
   imports: [
     BrowserModule,
