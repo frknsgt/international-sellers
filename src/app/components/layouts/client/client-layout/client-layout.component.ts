@@ -1,5 +1,4 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
-import { FlakeAnimationService } from 'src/app/utils';
 
 @Component({
   selector: 'app-client-layout',
@@ -8,11 +7,8 @@ import { FlakeAnimationService } from 'src/app/utils';
 })
 export class ClientLayoutComponent implements OnInit {
   constructor(
-    private _flakeAnimationService: FlakeAnimationService,
-    private _elementRef: ElementRef
   ) {}
 
   ngOnInit(): void {
-    this._flakeAnimationService.run(this._elementRef);
   }
 }

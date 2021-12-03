@@ -11,7 +11,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AdminLayoutModule } from './pages/admin/admin-layout.module';
 import { MatModule } from './utils';
-import { NgParticlesModule } from 'ng-particles';
 import { ColorPickerModule } from 'ngx-color-picker';
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -22,12 +21,14 @@ import {
   PasswordChangeComponent,
   PasswordControlWindowComponent,
 } from './components';
+import { HomepageComponent } from './pages';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     PasswordChangeComponent,
+    HomepageComponent,
     PasswordControlWindowComponent,
   ],
   imports: [
@@ -38,7 +39,6 @@ import {
     BrowserAnimationsModule,
     ColorPickerModule,
     RouterModule,
-    NgParticlesModule,
     FormsModule,
     MatSnackBarModule,
     MatModule,
