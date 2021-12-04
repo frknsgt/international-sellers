@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Roles } from 'src/app/models';
+import { Product, Roles } from 'src/app/models';
 import {
   AuthService,
   CurrentUserService,
   LanguageService,
 } from 'src/app/utils';
+import { ProductService } from 'src/app/utils/services/product/product.service';
 
 @Component({
   selector: 'app-homepage',
@@ -15,9 +16,10 @@ export class HomepageComponent implements OnInit {
   constructor(
     private _authService: AuthService,
     private currentUserService: CurrentUserService,
-    private _languageService: LanguageService
+    private _languageService: LanguageService,
+    private _productService: ProductService
   ) {}
-
+  product:any;
   lang: string =
     this._languageService.getLanguage() == 'en'
       ? 'us'
@@ -31,7 +33,9 @@ export class HomepageComponent implements OnInit {
       Roles.Moderator,
     ].indexOf(this.currentUserService.value?.result?.UserTypeName) !== -1;
 
-  ngOnInit(): void {}
+  async ngOnInit() {
+    this.product=<Array<Product>> await this._productService.listAsync();
+  }
 
   logout() {
     this._authService.logout('/');

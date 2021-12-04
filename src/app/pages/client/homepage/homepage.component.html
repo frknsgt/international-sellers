@@ -12,42 +12,12 @@
             <div class="row">
               <div class="col-md-7 col-lg-6 ">
                 <div class="detail-box">
-                  <h1>
-                    Fast Food Restaurant
+                  <h1 class="carousel-title">
+                    {{'Welcome to the international marketing platform' | translate}}
                   </h1>
                   <p>
-                    Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam
-                    quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil
-                    ducimus libero ipsam.
+                    {{'You can buy products from international companies or sell your own product.' | translate}}
                   </p>
-                  <div class="btn-box">
-                    <a href="" class="btn1">
-                      Order Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item ">
-          <div class="container ">
-            <div class="row">
-              <div class="col-md-7 col-lg-6 ">
-                <div class="detail-box">
-                  <h1>
-                    Fast Food Restaurant
-                  </h1>
-                  <p>
-                    Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam
-                    quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil
-                    ducimus libero ipsam.
-                  </p>
-                  <div class="btn-box">
-                    <a href="" class="btn1">
-                      Order Now
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -58,17 +28,31 @@
             <div class="row">
               <div class="col-md-7 col-lg-6 ">
                 <div class="detail-box">
-                  <h1>
-                    Fast Food Restaurant
+                  <h1 class="carousel-title">
+                    {{'Foreign trade deficit increased by 51.3% in July' | translate}}
                   </h1>
                   <p>
-                    Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam
-                    quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil
-                    ducimus libero ipsam.
+                    {{'In July, foreign trade deficit increased by 51.3% compared to the same month of the previous year and rose from 2 billion 827 million dollars to 4 billion 278 million dollars. While the import coverage ratio of exports was 84.0% in July 2020, it decreased to 79.3% in July 2021.' | translate}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container ">
+            <div class="row">
+              <div class="col-md-7 col-lg-6 ">
+                <div class="detail-box">
+                  <h1 class="carousel-title">
+                    {{'It is now very easy to manage the products of your company easily' | translate}}
+                  </h1>
+                  <p>
+                    {{'In order to increase the sales of your company, you can easily save your product information to the system. Thanks to the artificial intelligence used in the registration phase, we offer you price estimation services in order to obtain the highest profit rate according to the supply demand ratio of your products.' | translate}}
                   </p>
                   <div class="btn-box">
                     <a href="" class="btn1">
-                      Order Now
+                      {{'View Products' | translate}}
                     </a>
                   </div>
                 </div>
@@ -96,7 +80,7 @@
 
 <section class="food_section layout_padding-bottom">
   <div class="container">
-    <div class="heading_container heading_center">
+    <div class="heading_container heading_center mt-3">
       <h2>
         Our Menu
       </h2>
@@ -112,20 +96,10 @@
 
     <div class="filters-content">
       <div class="row grid">
-        <div class="col-sm-6 col-lg-4">
+        <div class="col-sm-6 col-lg-4" *ngFor="let item of product">
+          <a [routerLink]='["product",item.Id]'>
           <app-product-cart></app-product-cart>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <app-product-cart></app-product-cart>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <app-product-cart></app-product-cart>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <app-product-cart></app-product-cart>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <app-product-cart></app-product-cart>
+        </a>
         </div>
       </div>
     </div>
@@ -148,7 +122,7 @@
   <div class="container">
     <div class="heading_container">
       <h2>
-        Book A Table
+        {{'Your Complaints and Suggestions' | translate}}
       </h2>
     </div>
     <div class="row">
@@ -156,39 +130,20 @@
         <div class="form_container">
           <form action="">
             <div>
-              <input type="text" class="form-control" placeholder="Your Name" />
+              <input type="text" class="form-control" placeholder="{{'Your Name' | translate}}" />
             </div>
             <div>
-              <input type="text" class="form-control" placeholder="Phone Number" />
+              <input type="text" class="form-control" placeholder="{{'Phone Number' | translate}}" />
             </div>
             <div>
-              <input type="email" class="form-control" placeholder="Your Email" />
+              <input type="email" class="form-control" placeholder="{{'Your Email' | translate}}" />
             </div>
             <div>
-              <select class="form-control nice-select wide">
-                <option value="" disabled selected>
-                  How many persons?
-                </option>
-                <option value="">
-                  2
-                </option>
-                <option value="">
-                  3
-                </option>
-                <option value="">
-                  4
-                </option>
-                <option value="">
-                  5
-                </option>
-              </select>
-            </div>
-            <div>
-              <input type="date" class="form-control">
+              <textarea type="text" rows="5" class="form-control h-auto" placeholder="{{'Explanation' | translate}}" ></textarea>
             </div>
             <div class="btn_box">
               <button>
-                Book Now
+                {{'Send' | translate}}
               </button>
             </div>
           </form>

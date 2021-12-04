@@ -1,20 +1,10 @@
-<section class="food_section layout_padding-bottom">
+<section class="food_section layout_padding-bottom mb-5">
     <div class="filters-content">
         <div class="row grid">
-            <div class="col-sm-6 col-lg-4">
-                <app-product-cart></app-product-cart>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <app-product-cart></app-product-cart>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <app-product-cart></app-product-cart>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <app-product-cart></app-product-cart>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <app-product-cart></app-product-cart>
+            <div class="col-sm-6 col-lg-4" *ngFor="let item of product">
+                <a [routerLink]='["product",item.Id]'>
+                    <app-product-cart></app-product-cart>
+                </a>
             </div>
         </div>
     </div>

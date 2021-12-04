@@ -25,10 +25,10 @@ export class ProductService {
     );
   }
 
-  async findAsync(productID) {
+  async findAsync(Id) {
     return await this._apiFetchService.requestAsync(
       'GET',
-      `product/${productID}`,
+      `product/${Id}`,
       null,
       true
     );
