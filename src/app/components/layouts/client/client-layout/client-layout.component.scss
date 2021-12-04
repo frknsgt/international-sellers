@@ -1,0 +1,20 @@
+.homepage{
+    &__lang {
+        &__selection {
+          cursor: pointer;
+          z-index: 11;
+          position: absolute;
+          right: 10px;
+          
+        }
+        &__one{
+            right: 70px;
+        }
+    
+        > i {
+          width: 30px !important;
+          height: 30px !important;
+          background-size: cover !important;
+        }
+      }
+}

@@ -1,4 +1,8 @@
 <section class="food_section layout_padding-bottom mb-5">
+    <ul class="filters_menu border-bottom border-top py-2">
+        <li class="active" (click)="filterData()">{{'All'| translate}}</li>
+        <li *ngFor="let category of categories" (click)="filterData(category.Id)">{{category.CategoryName}}</li>
+      </ul>
     <div class="filters-content">
         <div class="row grid">
             <div class="col-sm-6 col-lg-4" *ngFor="let item of product">
