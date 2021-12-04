@@ -4,7 +4,7 @@
         <li *ngFor="let category of categories" (click)="filterData(category.Id)">{{category.CategoryName}}</li>
       </ul>
     <div class="filters-content">
-        <div class="row grid">
+        <div class="row m-0 grid">
             <div class="col-sm-6 col-lg-4" *ngFor="let item of product">
                 <a [routerLink]='["product",item.Id]'>
                     <app-product-cart></app-product-cart>

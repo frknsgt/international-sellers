@@ -12,22 +12,22 @@ export class AdminSidebarItemService {
   menu: Array<object> = [
     {
       title: 'Company List',
-      icon: 'fa fa-palette',
+      icon: 'far fa-building',
       link: '/admin/companies',
     },
     {
       title: 'Category List',
-      icon: 'fa fa-palette',
+      icon: 'fas fa-th-list',
       link: '/admin/categories',
     },
     {
       title: 'Order List',
-      icon: 'fa fa-palette',
+      icon: 'fas fa-shopping-cart',
       link: '/admin/orders',
     },
     {
       title: 'Product List',
-      icon: 'fa fa-palette',
+      icon: 'fab fa-product-hunt',
       link: '/admin/products',
     },
   ];

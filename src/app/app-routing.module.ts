@@ -51,27 +51,26 @@ const routes: Routes = [
       {
         path: '',
         component: DashboardComponent,
-        data: { title: '', icon: 'fa fa-2x fa-home' },
       },
       {
         path: 'categories',
         component: CategoryListComponent,
-        data: { title: 'Category List', icon: 'fa fa-2x fa-home' },
+        data: { title: 'Category List', icon: 'fas fa-th-list fa-2x' },
       },
       {
         path: 'companies',
         component: CompanyListComponent,
-        data: { title: 'Company List', icon: 'fa fa-2x fa-home' },
+        data: { title: 'Company List', icon: 'far fa-building fa-2x' },
       },
       {
         path: 'orders',
         component: OrderListComponent,
-        data: { title: 'Order List', icon: 'fa fa-2x fa-home' },
+        data: { title: 'Order List', icon: 'fas fa-shopping-cart fa-2x' },
       },
       {
         path: 'products',
         component: ProductListComponent,
-        data: { title: 'Product List', icon: 'fa fa-2x fa-home' },
+        data: { title: 'Product List', icon: 'fab fa-product-hunt fa-2x' },
       },
     ],
   },

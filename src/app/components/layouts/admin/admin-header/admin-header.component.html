@@ -25,15 +25,14 @@
         <li class="nav-item dropdown user-menu">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                 <img src="assets/images/default/user.png" class="user-image img-circle elevation-2" alt="User Image">
-                <span class="d-none d-md-inline">{{ userInformation.FirstName }} {{ userInformation.LastName
-                    }}</span>
+                <span class="d-none d-md-inline">{{ userInformation.CompanyName }}</span>
             </a>
             <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
                 <li class="user-header bg-primary">
-                    <img src="assets/images/default/user.png" class="img-circle elevation-2" alt="User Image">
+                    <img src="../../../../../assets/images/default/company.png" class="img-circle elevation-2" alt="User Image">
                     <p>
-                        {{ userInformation.FirstName }} {{ userInformation.LastName }}
-                        <small>{{ userInformation.UserTypeName | translate }}</small>
+                        {{ userInformation.CompanyName }}
+                        <small>{{ userInformation.EmailAddress }}</small>
                     </p>
                 </li>
                 <li class="user-body p-1">

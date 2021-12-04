@@ -18,3 +18,8 @@
         }
       }
 }
+.layout{
+  &__content{
+    min-height: 60vh;
+  }
+}
