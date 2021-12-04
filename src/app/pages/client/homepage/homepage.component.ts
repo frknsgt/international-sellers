@@ -4,6 +4,7 @@ import {
   AuthService,
   CurrentUserService,
   LanguageService,
+  LearnService
 } from 'src/app/utils';
 
 @Component({
@@ -15,8 +16,9 @@ export class HomepageComponent implements OnInit {
   constructor(
     private _authService: AuthService,
     private currentUserService: CurrentUserService,
-    private _languageService: LanguageService
-  ) {}
+    private _languageService: LanguageService,
+    private _learnService: LearnService
+  ) { }
 
   lang: string =
     this._languageService.getLanguage() == 'en'
@@ -31,7 +33,8 @@ export class HomepageComponent implements OnInit {
       Roles.Moderator,
     ].indexOf(this.currentUserService.value?.result?.UserTypeName) !== -1;
 
-  ngOnInit(): void {}
+  async ngOnInit() {
+  }
 
   logout() {
     this._authService.logout('/');
