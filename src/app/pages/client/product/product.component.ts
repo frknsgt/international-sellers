@@ -21,7 +21,6 @@ export class ProductComponent implements OnInit {
 
   async ngOnInit() {
     this.product =<Product> await this._productservice.findAsync(this.Id);
-    console.log(this.product)
 
   }
 

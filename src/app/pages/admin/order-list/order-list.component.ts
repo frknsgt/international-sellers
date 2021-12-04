@@ -31,7 +31,6 @@ export class OrderListComponent implements OnInit {
       this.orders = <Array<any>>(
         await this._orderService.listAsync()
       );
-      console.log(this.orders)
     } catch (error) {
       this._orderService.errorNotification(error);
     }

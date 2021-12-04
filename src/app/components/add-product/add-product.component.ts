@@ -80,6 +80,5 @@ export class AddProductComponent implements OnInit {
   async getPredict(){
     this.predictData=<number>await this._learnService.listAsync()
     this.predictData=Math.floor(this.predictData)
-    console.log(this.predictData)
   }
 }

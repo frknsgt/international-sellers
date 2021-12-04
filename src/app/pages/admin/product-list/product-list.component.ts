@@ -30,7 +30,6 @@ export class ProductListComponent implements OnInit {
       this.products = <Array<any>>(
         await this._productService.listAsync()
       );
-      console.log(this.products)
     } catch (error) {
       this._productService.errorNotification(error);
     }

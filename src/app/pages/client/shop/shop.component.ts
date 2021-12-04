@@ -22,7 +22,6 @@ export class ShopComponent implements OnInit {
   async ngOnInit() {
     this.product=<Array<Product>> await this._productService.listAsync();
     this.categories=<Array<any>> await this._categoryService.listAsync();
-    console.log(this.categories)
     this.tempProduct=this.product
   }
 
