@@ -14,7 +14,6 @@ export class ProductCartComponent implements OnInit {
   ) { }
   product: Product = new Product;
   async ngOnInit() {
-    this.product = <Product>await this._productService.listAsync()
   }
 
 }
