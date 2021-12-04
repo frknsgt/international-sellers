@@ -45,6 +45,11 @@ export class AdminSidebarItemService {
       icon: 'fa fa-palette',
       link: '/admin/categories',
     },
+    {
+      title: 'Company List',
+      icon: 'fa fa-palette',
+      link: '/admin/companies',
+    },
   ];
 
   getChildUrlActiveState(path: string[]) {

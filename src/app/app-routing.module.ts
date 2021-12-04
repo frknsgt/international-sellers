@@ -11,9 +11,10 @@ import {
   LoginComponent,
   AboutComponent,
   ProductComponent,
-  CategoryListComponent
+  CategoryListComponent,
+  ShopComponent,
+  CompanyListComponent
 } from './pages';
-import { ShopComponent } from './pages/client/shop/shop.component';
 
 
 const routes: Routes = [
@@ -54,6 +55,11 @@ const routes: Routes = [
         path: 'categories',
         component: CategoryListComponent,
         data: { title: 'Category List', icon: 'fa fa-2x fa-home' },
+      },
+      {
+        path: 'companies',
+        component: CompanyListComponent,
+        data: { title: 'Company List', icon: 'fa fa-2x fa-home' },
       },
     ],
   },

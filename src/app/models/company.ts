@@ -1,8 +1,8 @@
 export class Company {
-    companyName: string;
-    companyID: number;
-    email: string;
-    tel: number;
-    password: string;
-    description: string;
+    CompanyName: string;
+    CompanyID: number;
+    EmailAddress: string;
+    PhoneNumber: number;
+    Password: string;
+    Description: string;
 }

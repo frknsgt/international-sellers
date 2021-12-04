@@ -21,9 +21,10 @@ import {
   PasswordChangeComponent,
   PasswordControlWindowComponent,
 } from './components';
-import { HomepageComponent, CategoryListComponent, AboutComponent, ProductComponent, ShopComponent } from './pages';
+import { HomepageComponent, CategoryListComponent, AboutComponent, ProductComponent, ShopComponent, CompanyListComponent } from './pages';
 import { AddCategoryComponent, ProductCartComponent, OfferComponent } from './components';
-import {ClientFooterComponent, ClientHeaderComponent} from './components/layouts'
+import {ClientFooterComponent, ClientHeaderComponent} from './components/layouts';
+import { AddCompanyComponent } from './components/add-company/add-company.component'
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import {ClientFooterComponent, ClientHeaderComponent} from './components/layouts
     PasswordControlWindowComponent,
     ClientHeaderComponent,
     ClientFooterComponent,
+    CompanyListComponent,
     OfferComponent,
     ProductCartComponent,
     CategoryListComponent,
@@ -41,6 +43,7 @@ import {ClientFooterComponent, ClientHeaderComponent} from './components/layouts
     ProductComponent,
     ShopComponent,
     AddCategoryComponent,
+    AddCompanyComponent,
   ],
   imports: [
     BrowserModule,
