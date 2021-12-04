@@ -7,3 +7,4 @@ export * from './current-user/current-user.service';
 export * from './learn/learn.service';
 export * from './category/category.service'
 export * from './company/company.service'
+export * from  './order/order.service'

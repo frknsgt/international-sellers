@@ -13,7 +13,8 @@ import {
   ProductComponent,
   CategoryListComponent,
   ShopComponent,
-  CompanyListComponent
+  CompanyListComponent,
+  OrderListComponent
 } from './pages';
 
 
@@ -60,6 +61,11 @@ const routes: Routes = [
         path: 'companies',
         component: CompanyListComponent,
         data: { title: 'Company List', icon: 'fa fa-2x fa-home' },
+      },
+      {
+        path: 'orders',
+        component: OrderListComponent,
+        data: { title: 'Order List', icon: 'fa fa-2x fa-home' },
       },
     ],
   },

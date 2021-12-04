@@ -21,7 +21,7 @@ import {
   PasswordChangeComponent,
   PasswordControlWindowComponent,
 } from './components';
-import { HomepageComponent, CategoryListComponent, AboutComponent, ProductComponent, ShopComponent, CompanyListComponent } from './pages';
+import { HomepageComponent, CategoryListComponent, AboutComponent, ProductComponent, ShopComponent, CompanyListComponent, OrderListComponent } from './pages';
 import { AddCategoryComponent, ProductCartComponent, OfferComponent } from './components';
 import {ClientFooterComponent, ClientHeaderComponent} from './components/layouts';
 import { AddCompanyComponent } from './components/add-company/add-company.component'
@@ -37,6 +37,7 @@ import { AddCompanyComponent } from './components/add-company/add-company.compon
     ClientFooterComponent,
     CompanyListComponent,
     OfferComponent,
+    OrderListComponent,
     ProductCartComponent,
     CategoryListComponent,
     AboutComponent,

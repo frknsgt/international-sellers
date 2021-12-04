@@ -11,34 +11,9 @@ export class AdminSidebarItemService {
   _url = this._router.routerState.snapshot.url;
   menu: Array<object> = [
     {
-      title: 'User Transactions',
-      icon: 'fa fa-user',
-      linkActive: ['/admin/users', '/admin/user/add'],
-      submenuShowHide: this.getChildUrlActiveState(['user', 'users']),
-      submenu: [
-        {
-          title: 'User List',
-          icon: 'fa fa-address-book',
-          link: '/admin/users',
-        },
-        {
-          title: 'User Add',
-          icon: 'fa fa-user-plus',
-          link: '/admin/user/add',
-        },
-      ],
-      authorize: [Roles.Root, Roles.Administrator, Roles.Manager],
-    },
-    {
-      title: 'Institutions',
-      icon: 'far fa-building',
-      link: '/admin/institutions',
-      authorize: [Roles.Root, Roles.Administrator],
-    },
-    {
-      title: 'Competitions',
-      icon: 'fa fa-gamepad',
-      link: '/admin/competitions',
+      title: 'Company List',
+      icon: 'fa fa-palette',
+      link: '/admin/companies',
     },
     {
       title: 'Category List',
@@ -46,9 +21,14 @@ export class AdminSidebarItemService {
       link: '/admin/categories',
     },
     {
-      title: 'Company List',
+      title: 'Order List',
       icon: 'fa fa-palette',
-      link: '/admin/companies',
+      link: '/admin/orders',
+    },
+    {
+      title: 'Product List',
+      icon: 'fa fa-palette',
+      link: '/admin/products',
     },
   ];
 
