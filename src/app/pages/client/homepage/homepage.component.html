@@ -98,7 +98,7 @@
       <div class="row grid">
         <div class="col-sm-6 col-lg-4" *ngFor="let item of product">
           <a [routerLink]='["product",item.Id]'>
-          <app-product-cart></app-product-cart>
+          <app-product-cart [item]="item"></app-product-cart>
         </a>
         </div>
       </div>

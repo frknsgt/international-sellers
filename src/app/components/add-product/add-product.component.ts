@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Product } from '../../models';
 import { NgForm } from '@angular/forms';
-import { CategoryService, CurrentUserService, NotificationService, ProductService } from '../../utils';
+import { CategoryService, CurrentUserService, LearnService, NotificationService, ProductService } from '../../utils';
 import { Router } from '@angular/router';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatDialogRef } from '@angular/material/dialog';
@@ -18,12 +18,15 @@ export class AddProductComponent implements OnInit {
     private _notificationService: NotificationService,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _categoryService: CategoryService,
-    private _currentUserService: CurrentUserService
+    private _currentUserService: CurrentUserService,
+    private _learnService:LearnService
   ) {}
   _model: Product = new Product();
   _productRenew: boolean = false;
   _action: Function;
   disableButton: boolean = false;
+  predictData=0;
+
   categories:any;
   async ngOnInit() {
     this.categories=<any> await this._categoryService.listAsync();
@@ -73,5 +76,10 @@ export class AddProductComponent implements OnInit {
       this._productService.errorNotification(error);
       return false;
     }
+  }
+  async getPredict(){
+    this.predictData=<number>await this._learnService.listAsync()
+    this.predictData=Math.floor(this.predictData)
+    console.log(this.predictData)
   }
 }

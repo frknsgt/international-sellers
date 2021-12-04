@@ -17,15 +17,31 @@
                     {{ "Product Name field must be filled" | translate }}</mat-error>
             </mat-form-field>
         </div>
-        <div class="form-group mt-2">
+        <div class="form-group">
             <mat-form-field appearance="outline" class="w-100">
-                <mat-label>{{ "Price" | translate }}</mat-label>
-                <input matInput maxlength="11" type="number" placeholder="{{ 'Enter Price' | translate }}"
-                    name="Price" #Price="ngModel" [(ngModel)]="_model.Price" required />
-                <mat-error *ngIf="Price.invalid && Price.touched">
-                    {{ "Price field must be filled" | translate }}</mat-error>
+              <mat-label>{{ "Category" | translate }}</mat-label>
+              <select
+                matNativeControl
+                name="CategoryID"
+                #CategoryID="ngModel"
+                [(ngModel)]="_model.CategoryID"
+                (ngModelChange)="getPredict()"
+                required
+              >
+                <option style="display: none">
+                  {{ "Select the category" | translate }}
+                </option>
+                <ng-container *ngFor="let category of categories">
+                  <option [value]="category.Id">
+                    {{ category.CategoryName }}
+                  </option>
+                </ng-container>
+              </select>
+              <mat-error *ngIf="CategoryID.invalid">
+                {{ "Select the Category Name" | translate }}</mat-error
+              >
             </mat-form-field>
-        </div>
+          </div>
         <div class="form-group mt-2">
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>{{ "Stock Amount" | translate }}</mat-label>
@@ -44,30 +60,6 @@
                     {{ "Description field must be filled" | translate }}</mat-error>
             </mat-form-field>
         </div>
-        <div class="form-group">
-            <mat-form-field appearance="outline" class="w-100">
-              <mat-label>{{ "Category" | translate }}</mat-label>
-              <select
-                matNativeControl
-                name="CategoryID"
-                #CategoryID="ngModel"
-                [(ngModel)]="_model.CategoryID"
-                required
-              >
-                <option style="display: none">
-                  {{ "Select the category" | translate }}
-                </option>
-                <ng-container *ngFor="let category of categories">
-                  <option [value]="category.Id">
-                    {{ category.CategoryName }}
-                  </option>
-                </ng-container>
-              </select>
-              <mat-error *ngIf="CategoryID.invalid">
-                {{ "Select the Category Name" | translate }}</mat-error
-              >
-            </mat-form-field>
-          </div>
           <div class="form-group mt-2">
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>{{ "Image File Name" | translate }}</mat-label>
@@ -75,6 +67,15 @@
                     name="ImagePath" #ImagePath="ngModel" [(ngModel)]="_model.ImagePath" required />
                 <mat-error *ngIf="ImagePath.invalid && ImagePath.touched">
                     {{ "Image File Name field must be filled" | translate }}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="form-group mt-2">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>{{ "Price" | translate }}</mat-label>
+                <input matInput maxlength="11" type="number" placeholder="{{ 'Enter Price' | translate }}"
+                    name="Price" #Price="ngModel" [(ngModel)]="_model.Price" required />
+                <mat-error *ngIf="Price.invalid && Price.touched">
+                    {{ "Price field must be filled" | translate }}</mat-error>
             </mat-form-field>
         </div>
         <div class="form-group">
