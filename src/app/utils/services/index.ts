@@ -5,3 +5,4 @@ export * from './notification/notification.service';
 export * from './user/user.service';
 export * from './current-user/current-user.service';
 export * from './learn/learn.service';
+export * from './category/category.service'

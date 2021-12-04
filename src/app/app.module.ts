@@ -21,14 +21,9 @@ import {
   PasswordChangeComponent,
   PasswordControlWindowComponent,
 } from './components';
-import { HomepageComponent } from './pages';
-import { ClientHeaderComponent } from './components/layouts/client/client-header/client-header.component';
-import { ClientFooterComponent } from './components/layouts/client/client-footer/client-footer.component';
-import { OfferComponent } from './components/offer/offer.component';
-import { ProductCartComponent } from './components/product-cart/product-cart.component';
-import { AboutComponent } from './pages/client/about/about.component';
-import { ProductComponent } from './pages/client/product/product.component';
-import { ShopComponent } from './pages/client/shop/shop.component';
+import { HomepageComponent, CategoryListComponent, AboutComponent, ProductComponent, ShopComponent } from './pages';
+import { AddCategoryComponent, ProductCartComponent, OfferComponent } from './components';
+import {ClientFooterComponent, ClientHeaderComponent} from './components/layouts'
 
 @NgModule({
   declarations: [
@@ -41,9 +36,11 @@ import { ShopComponent } from './pages/client/shop/shop.component';
     ClientFooterComponent,
     OfferComponent,
     ProductCartComponent,
+    CategoryListComponent,
     AboutComponent,
     ProductComponent,
     ShopComponent,
+    AddCategoryComponent,
   ],
   imports: [
     BrowserModule,

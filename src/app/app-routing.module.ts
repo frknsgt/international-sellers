@@ -10,7 +10,8 @@ import {
   DashboardComponent,
   LoginComponent,
   AboutComponent,
-  ProductComponent
+  ProductComponent,
+  CategoryListComponent
 } from './pages';
 import { ShopComponent } from './pages/client/shop/shop.component';
 
@@ -48,6 +49,11 @@ const routes: Routes = [
         path: '',
         component: DashboardComponent,
         data: { title: '', icon: 'fa fa-2x fa-home' },
+      },
+      {
+        path: 'categories',
+        component: CategoryListComponent,
+        data: { title: 'Category List', icon: 'fa fa-2x fa-home' },
       },
     ],
   },

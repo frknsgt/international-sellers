@@ -41,44 +41,9 @@ export class AdminSidebarItemService {
       link: '/admin/competitions',
     },
     {
-      title: 'Color List',
+      title: 'Category List',
       icon: 'fa fa-palette',
-      link: '/admin/colors',
-    },
-    {
-      title: 'Card Transactions',
-      icon: 'fa fa-building',
-      linkActive: ['/admin/cards', '/admin/card/add'],
-      submenu: [
-        {
-          title: 'Card List',
-          icon: 'fa fa-map',
-          link: '/admin/cards',
-        },
-        {
-          title: 'Card Add',
-          icon: 'fa fa-plus-square',
-          link: '/admin/card/add',
-        },
-      ],
-    },
-    {
-      title: 'Icon Transactions',
-      icon: 'fa fa-user',
-      linkActive: ['/admin/icons', '/admin/icons/add'],
-      submenuShowHide: this.getChildUrlActiveState(['user', 'users']),
-      submenu: [
-        {
-          title: 'Icon List',
-          icon: 'fa fa-address-book',
-          link: '/admin/icons',
-        },
-        {
-          title: 'Add Icon',
-          icon: 'fa fa-user-plus',
-          link: '/admin/icon/add',
-        },
-      ],
+      link: '/admin/categories',
     },
   ];
 
