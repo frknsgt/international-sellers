@@ -20,11 +20,26 @@ export function HttpLoaderFactory(http: HttpClient) {
 import {
   PasswordChangeComponent,
   PasswordControlWindowComponent,
+  AddCategoryComponent,
+  ProductCartComponent,
+  OfferComponent,
+  AddCompanyComponent,
+  AddProductComponent
 } from './components';
-import { HomepageComponent, CategoryListComponent, AboutComponent, ProductComponent, ShopComponent, CompanyListComponent, OrderListComponent } from './pages';
-import { AddCategoryComponent, ProductCartComponent, OfferComponent } from './components';
-import {ClientFooterComponent, ClientHeaderComponent} from './components/layouts';
-import { AddCompanyComponent } from './components/add-company/add-company.component'
+import {
+  HomepageComponent,
+  CategoryListComponent,
+  AboutComponent,
+  ProductComponent,
+  ShopComponent,
+  CompanyListComponent,
+  OrderListComponent,
+  ProductListComponent,
+} from './pages';
+import {
+  ClientFooterComponent,
+  ClientHeaderComponent,
+} from './components/layouts';
 
 @NgModule({
   declarations: [
@@ -41,10 +56,12 @@ import { AddCompanyComponent } from './components/add-company/add-company.compon
     ProductCartComponent,
     CategoryListComponent,
     AboutComponent,
+    ProductListComponent,
     ProductComponent,
     ShopComponent,
     AddCategoryComponent,
     AddCompanyComponent,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule,

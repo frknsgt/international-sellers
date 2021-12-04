@@ -1,4 +1,9 @@
-<div class="row justify-content-end">
+<div class="row">
+    <div class="col-12 col-md-4 add-button pt-2">
+        <button type="button" class="btn btn-sm btn-outline-success" (click)="openAddProduct()"><i
+                class="fas fa-plus"></i>
+            {{ 'Add Product' | translate }}</button>
+    </div>
     <div class="col-12 col-md-4 ml-auto text-right pr-2">
         <mat-form-field>
             <mat-label>{{ 'Search' | translate }}</mat-label>
@@ -16,27 +21,27 @@
             <thead>
                 <tr>
                     <th>{{ 'Product Name' | translate }}</th>
-                    <th>{{ 'Order Amount' | translate }}</th>
-                    <th>{{ 'Price' | translate }}</th>
+                    <th>{{ 'Stock Amount' | translate }}</th>
                     <th>{{ 'Category' | translate }}</th>
-                    <th>{{ 'Receiver Company' | translate }}</th>
-                    <th>{{ 'Seller Company' | translate }}</th>
+                    <th>{{ 'Company Name' | translate }}</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let order of orders | filter:searchText | paginate: paginationConfig">
-                    <td> {{ order.ProductName}} </td>
-                    <td> {{ order.ProductCOunt}} </td>
-                    <th>{{ order.Price }}</th>
-                    <td> {{ order.CategoryName}} </td>
-                    <td> {{ order.ReceiverCompany}} </td>
-                    <td> {{ order.SellerCompany}} </td>
+                <tr *ngFor="let product of products | filter:searchText | paginate: paginationConfig">
+                    <td> {{ product.ProductName}} </td>
+                    <td> {{ product.StockAmount}} </td>
+                    <td> {{ product.CategoryName}} </td>
+                    <td> {{ product.CompanyName}} </td>
                     <td class="list-button text-right">
                         <a mat-icon-button [matMenuTriggerFor]="menu">
                             <mat-icon class="list-menu">more_vert</mat-icon>
                         </a>
                         <mat-menu #menu="matMenu">
-                            <a mat-menu-item (click)="orderDelete(order.Id)">
+                            <a mat-menu-item (click)="openAddProduct(product.Id)">
+                                <mat-icon>edit</mat-icon>
+                                <span>{{ 'Edit' | translate }}</span>
+                            </a>
+                            <a mat-menu-item (click)="productDelete(product.Id)">
                                 <mat-icon>delete</mat-icon>
                                 <span>{{ 'Delete' | translate }}</span>
                             </a>

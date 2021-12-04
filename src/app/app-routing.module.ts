@@ -14,7 +14,8 @@ import {
   CategoryListComponent,
   ShopComponent,
   CompanyListComponent,
-  OrderListComponent
+  OrderListComponent,
+  ProductListComponent
 } from './pages';
 
 
@@ -66,6 +67,11 @@ const routes: Routes = [
         path: 'orders',
         component: OrderListComponent,
         data: { title: 'Order List', icon: 'fa fa-2x fa-home' },
+      },
+      {
+        path: 'products',
+        component: ProductListComponent,
+        data: { title: 'Product List', icon: 'fa fa-2x fa-home' },
       },
     ],
   },
