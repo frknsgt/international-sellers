@@ -3,4 +3,5 @@ export * from './auth/auth.service';
 export * from './admin-sidebar-item/admin-sidebar-item.service';
 export * from './notification/notification.service';
 export * from './user/user.service';
-export * from './current-user/current-user.service'
+export * from './current-user/current-user.service';
+export * from './learn/learn.service';

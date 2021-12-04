@@ -4,6 +4,7 @@ import {
   AuthService,
   CurrentUserService,
   LanguageService,
+  LearnService
 } from 'src/app/utils';
 import { ProductService } from 'src/app/utils/services/product/product.service';
 
@@ -17,7 +18,8 @@ export class HomepageComponent implements OnInit {
     private _authService: AuthService,
     private currentUserService: CurrentUserService,
     private _languageService: LanguageService,
-    private _productService: ProductService
+    private _productService: ProductService,
+    private _learnService: LearnService
   ) {}
   product:any;
   lang: string =
